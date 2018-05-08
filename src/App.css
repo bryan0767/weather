@@ -1,0 +1,696 @@
+body {
+  display:flex;
+  height:100vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(hsl(200, 50%, 10%), hsla(200, 40%, 60%));
+  overflow:hidden;
+  margin: 0;
+  margin-left: 0;
+}
+
+#root {
+width:100%;
+height:100vh;
+overflow: hidden;
+}
+
+.main {
+  display:flex;
+  flex-flow: column wrap;
+  height:100vh;
+  overflow: hidden;
+  min-width: 1000px;
+}
+
+.topApp {
+  flex: 1.5;
+  display:flex;
+  flex-flow: row wrap;
+  color:white;
+  overflow: hidden;
+}
+
+.topApp > * {
+  flex:1;
+  height:100%;
+  display: flex;
+}
+
+#dateTime {
+  align-self: flex-start;
+  text-align: left;
+  flex-flow: column wrap;
+  min-height: 550px;
+}
+
+#dateTime > * {
+  margin-top: 5%;
+  margin-left: 5%;
+}
+
+#date {
+  font-size: 15px;
+  margin-left: 7%;
+}
+
+#time {
+margin-left: 7%;
+font-size: 15px;
+}
+
+#city {
+  font-size:35px;
+  align-self: flex-start;
+}
+
+.highsLows {
+  display: flex;
+  flex-flow: column wrap;
+  flex:1;
+}
+
+#min-label {
+  font-size: 15px;
+  text-align: center;
+}
+
+#max-label {
+  font-size: 15px;
+  text-align: center;
+}
+
+#mainlabels {
+  flex:.3;
+}
+
+#first {
+flex:1.2;
+}
+
+#theTimes {
+display: flex;
+flex:2;
+justify-content: center;
+align-items: center;
+font-size: 50px;
+}
+
+#theTimes > * {
+  margin:7px;
+}
+
+#temp {
+  font-size: 120px;
+}
+
+#conditions {
+flex:1.7;
+justify-content: space-around;
+display: flex;
+flex-flow: column wrap;
+align-items: center;
+margin-bottom: 10px;
+}
+
+#clouds {
+    font-size: 30px;
+}
+
+#storm {
+   height:65px;
+}
+
+#part3 {
+  display: flex;
+  flex-flow:row wrap;
+  align-self: flex-start;
+  min-height: 550px;
+  /* border:2px solid black; */
+}
+
+#topMiddle {
+  flex:1;
+  margin-top: 5%;
+   display: flex;
+   flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  height:20%;
+}
+
+#topMiddle > * {
+  background-color: transparent;
+  font-size: 13px;
+}
+
+#buttons {
+  display: flex;
+  flex: 1;
+  height:12%;
+  margin-top: 5%;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+#buttons > * {
+  /* display: flex; */
+  border:1px solid grey;
+  color:grey;
+  border-radius: 10%;
+  font-size: 18px;
+  width:40%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#zip {
+  text-align: center;
+  color:grey;
+  border:1px solid grey;
+  height:25%;
+  width:85%;
+  outline:none;
+  border-radius: 10%
+}
+
+#submit{
+  color:grey;
+  border:1px solid grey;
+  outline:none;
+}
+
+.bottomApp {
+  display:flex;
+  flex:1;
+  flex-flow: row wrap;
+  /* width:100%; */
+}
+
+.bottomApp > * {
+  border:1px solid grey;
+  border-radius: 3%;
+  flex:1;
+  text-align: center;
+  font-size: 12px;
+  /* min-height:400px; */
+}
+
+#date2{
+  display: flex;
+  flex:.3;
+  align-items: center;
+  justify-content: center;
+  color:white;
+  font-size: 20px;
+}
+#date3{
+  display: flex;
+  flex:.3;
+  align-items: center;
+  justify-content: center;
+  color:white;
+  font-size: 20px;
+
+}
+#date4{
+  display: flex;
+  flex:.3;
+  align-items: center;
+  justify-content: center;
+  color:white;
+  font-size: 20px;
+
+}
+#date5{
+  display: flex;
+  flex:.3;
+  align-items: center;
+  justify-content: center;
+  color:white;
+  font-size: 20px;
+
+}
+
+#panel {
+  display: flex;
+  flex-flow: column;
+}
+
+/*panel start*/
+
+.highsLows2 {
+  display: flex;
+  flex-flow: column wrap;
+  flex:1;
+  justify-content: center;
+  align-items: center;
+  color:white;
+
+  /* border: 2px solid black; */
+}
+
+.highsLows2 > * {
+  /* border:2px solid black; */
+  flex:1;
+  font-size: 15px;
+}
+
+.timeLabels {
+  display: flex;
+  flex-flow: row wrap;
+  flex:1;
+  justify-content: space-around;
+  align-items: center;
+  width:100%;
+}
+
+.timeLabels > * {
+  margin:7px;
+}
+
+.tempsBottom {
+  display: flex;
+  flex-flow: row wrap;
+  flex:1;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  font-size: 25px;
+}
+
+.tempsBottom > * {
+  margin:7px;
+}
+
+.images {
+  display: flex;
+  flex-flow: row wrap;
+  width:100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.images > * {
+  display: flex;
+  height:35px;
+}
+
+.descrip {
+  display: flex;
+  flex-flow: row wrap;
+  width:100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+
+/* begin media querys */
+@media only screen and (min-width: 2560px) {
+
+  /* .topApp {
+  min-height: 1125px;
+  }
+
+  #date {
+    font-size: 60px;
+  }
+
+  #time {
+  font-size: 60px;
+  }
+
+  #city {
+    font-size: 90px;
+  }
+
+  #theTimes {
+  display: flex;
+  flex:2.3;
+  justify-content: center;
+  align-items: center;
+  font-size: 180px;
+  }
+
+  #first {
+    flex:1.7;
+    /* border:2px solid black; */
+  }
+
+  /* #clouds {
+    font-size: 90px;
+  }
+
+  #storm {
+    height:200px;
+  }
+
+  #temp {
+    font-size: 380px;
+  }
+
+  #min-label {
+    font-size: 50px;
+    text-align: center;
+  }
+
+  #max-label {
+    font-size: 50px;
+    text-align: center;
+  }
+
+  #zip {
+    font-size: 60px;
+    height:100px;
+  }
+  #submit {
+    height:80px;
+    width: 60%;
+    font-size: 45px;
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  #buttons > * {
+    height:100px;
+    font-size:70px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  #panel > * {
+    font-size: 65px;
+  }
+
+  #date2 {
+    min-height: 205px;
+    max-height: 200px;
+  }
+  #date3 {
+    min-height: 205px;
+    max-height: 200px;
+  }
+  #date4 {
+    min-height: 205px;
+    max-height: 200px;
+  }
+  #date5 {
+    min-height: 205px;
+    max-height: 200px;
+  }
+
+  .highsLows2 {
+    min-height: 500px;
+    max-height: 500px;
+  }
+
+  .timeLabels > * {
+    font-size: 50px;
+  }
+
+  .tempsBottom > * {
+    font-size:80px;
+    align-self: center;
+  }
+
+  .descrip > * {
+  font-size: 50px;
+  }
+
+  .images > * {
+    min-height: 100px;
+    max-height: 100px;
+  }  */
+
+/* } */
+
+/* laptop large*/
+
+@media only screen and (min-width: 1440px) and (max-width:2559px) {
+
+  .highsLows {
+    min-height: 550px;
+  }
+
+  .bottomApp {
+    min-height:400px;
+  }
+
+  .main {
+    min-height: 550px;
+  }
+
+
+  #dateTime > * {
+  font-size: 30px;
+  }
+
+  #city {
+  font-size: 60px;
+  }
+
+  #first {
+  flex:1.5;
+  }
+
+  #theTimes > * {
+  font-size:90px;
+  }
+
+  #temp {
+  font-size: 200px;
+  }
+
+  #min-label {
+  font-size: 25px;
+  }
+
+  #max-label {
+  font-size:25px;
+  }
+
+  #clouds {
+  font-size: 50px;
+  }
+
+  #storm {
+  height: 100px;
+  }
+
+  #zip {
+  height:50px;
+  font-size: 30px;
+  }
+
+  #buttons > * {
+  height: 50px;
+  font-size: 30px;
+  }
+
+  #submit {
+  height:40px;
+  width:50%;
+  margin-top: 15px;
+  }
+
+  .bottomApp {
+  height:390px;
+  }
+
+  #panel > * {
+  font-size: 30px;
+  }
+
+  .timeLabels > * {
+  font-size: 25px;
+  }
+
+  .tempsBottom > * {
+  font-size:40px;
+  align-self: center;
+  }
+
+ .descrip > * {
+   font-size: 25px;
+  }
+
+  .images > * {
+  height:60px;
+  }
+
+}
+
+@media only screen and (min-width: 1024px) and (max-width:1439px) {
+
+  .main {
+    /* min-height: 578px; */
+  }
+
+  #dateTime > * {
+    font-size: 23px;
+  }
+
+  #city {
+    font-size: 30px;
+  }
+
+  #first {
+    flex:1.2;
+  }
+
+  #theTimes > * {
+    font-size:70px;
+  }
+
+  #temp {
+    font-size: 120px;
+  }
+
+  #min-label {
+    font-size: 20px;
+  }
+
+  #max-label {
+    font-size:20px;
+  }
+
+  #clouds {
+    font-size: 25px;
+  }
+
+  #storm {
+    height: 55px;
+  }
+
+  #zip {
+    height:30px;
+    font-size: 20px;
+  }
+
+  #buttons > * {
+    height: 30px;
+    font-size: 20px;
+  }
+
+  #submit {
+    height:30px;
+    width:50%;
+    margin-top: -15px;
+  }
+
+  #panel > * {
+    /* font-size: 27px; */
+  }
+
+  .timeLabels > * {
+    font-size: 18px;
+  }
+/*  */
+  .tempsBottom > * {
+    font-size:25px;
+    align-self: center;
+  }
+
+   .descrip > * {
+  font-size: 18px;
+  }
+
+  .images > * {
+    height: 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width:1023px) {
+
+  .main {
+    min-height: 550px;
+  }
+
+
+  #dateTime > * {
+    font-size: 18px;
+  }
+
+  #city {
+    font-size: 25px;
+  }
+
+  #first {
+    flex:1.5;
+  }
+
+  #theTimes > * {
+    font-size:50px;
+  }
+
+  #temp {
+    font-size: 120px;
+  }
+
+  #min-label {
+    font-size: 20px;
+  }
+
+  #max-label {
+    font-size:20px;
+  }
+
+  #clouds {
+    font-size: 25px;
+  }
+
+  #storm {
+    height: 50px;
+  }
+
+  #zip {
+    height:30px;
+    font-size: 20px;
+  }
+
+  #buttons > * {
+    height: 30px;
+    font-size: 20px;
+  }
+
+  #submit {
+    height:30px;
+    width:50%;
+    margin-top: -15px;
+  }
+
+  #panel > * {
+    font-size: 19px;
+  }
+
+  .timeLabels > * {
+    font-size: 16px;
+  }
+
+  .tempsBottom > * {
+    font-size:25px;
+    align-self: center;
+  }
+
+   .descrip > * {
+  font-size: 16px;
+  }
+
+  .images > * {
+    height:35px;
+  }
+}
+
+@media only screen and (min-width: 425px) and (max-width:767px) {
+
+
+}
+
+@media only screen and (min-width: 375px) and (max-width:424px) {}
+
+@media only screen and (min-width: 0px) and (max-width:374px) {}
